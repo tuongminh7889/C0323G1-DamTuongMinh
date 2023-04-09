@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh chu vi hinh tron</title>
+</head>
+<body>
+    <label for="R">Nhap ban kinh: </label>
+    <input type="text" id="R"/>
+    <button onclick="Tinh()">Tinh</button>
+    <p id="sircum"></p>
+</body>
+<script>
+    function Tinh() {
+        let r = document.getElementById("R").value;
+        let c = r * 3.14;
+        document.getElementById("sircum").innerHTML = "Chu vi :" + c;
+    }
+</script>
+</html>
