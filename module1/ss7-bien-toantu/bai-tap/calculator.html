@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form>
+    <h2>Caculator</h2>
+    <label for="num1"></label><input type="number" id="num1">
+    <input type="number" id="num2"><label for="num2"> </label> <br>
+    <input type="button" id="add" onclick="addNum()" value="Addition(+)">
+    <input type="button" id="sub" onclick="subNum()" value="Subtraction(-)">
+    <input type="button" id="mul" onclick="mulNum()" value="Multiplication(x)">
+    <input type="button" id="div" onclick="divNum()" value="Division(/)"><br>
+    <p id="result">Result Division:</p>
+</form>
+<script>
+    function addNum() {
+        let a = document.getElementById('num1').value;
+        let b = document.getElementById('num2').value;
+         c = Number(a) + Number(b);
+        document.getElementById('result').innerText = c;
+    }
+
+    function subNum() {
+        let a = document.getElementById('num1').value;
+        let b = document.getElementById('num2').value;
+        c = Number(a) - Number(b);
+        document.getElementById('result').innerText = c;
+    }
+
+    function mulNum() {
+        let a = document.getElementById('num1').value;
+        let b = document.getElementById('num2').value;
+        c = Number(a) * Number(b);
+        document.getElementById('result').innerText = c;
+    }
+
+    function divNum() {
+        let a = document.getElementById('num1').value;
+        let b = document.getElementById('num2').value;
+        c = Number(a) / Number(b);
+        document.getElementById('result').innerText = c;
+    }
+</script>
+</body>
+</html>
