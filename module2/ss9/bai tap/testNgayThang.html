@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>checkSoNgayTrongThang</title>
+</head>
+
+<body>
+<h1>Kiểm tra tháng này bao nhiêu ngày</h1>
+<label for="month"></label><input type="number" min="1" max="12" id="month" placeholder="Nhập tháng" style="width:10%">
+<button onclick="check_month()">Click vào để nhận kết quả</button>
+<p id="result">Chờ chút đang đợi tính kết quả</p>
+<script>
+    let month_1 = "1";
+    let month_2 = "2";
+    let month_3 = "3";
+    let month_4 = "4";
+    let month_5 = "5";
+    let month_6 = "6";
+    let month_7 = "7";
+    let month_8 = "8";
+    let month_9 = "9";
+    let month_10 = "10";
+    let month_11 = "11";
+    let month_12 = "12";
+    function check_month() {
+        let month = document.getElementById("month").value;
+        switch (month) {
+            case month_1:
+            case month_3:
+            case month_5:
+            case month_7:
+            case month_8:
+            case month_10:
+            case month_12:
+                document.getElementById("result").innerHTML = "Tháng " + month + " Chắc chắn có 31 ngày"
+                break;
+            case month_4:
+            case month_6:
+            case month_9:
+            case month_11:
+                document.getElementById("result").innerHTML = "Tháng " + month + " Chắc chắn có 30ngày"
+                break;
+            case month_2:
+                document.getElementById("result").innerHTML = "Tháng " + month + " Có thể có 28 hoặc 29 ngày"
+                break;
+            default:
+                document.getElementById("result").innerHTML = "Làm gì có tháng này pa"
+        }
+    }
+</script>
+</body>
+
+</html>
