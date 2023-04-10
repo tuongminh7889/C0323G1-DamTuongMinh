@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng</h1>
+<label for="weght"> Nhập cân nặng:  (kg)</label>
+<input type="text" name="" id="weght">
+<br>
+<br>
+<label for="tall"> Nhập chiều cao:  (m)</label>
+<input type="text" name="" id="tall">
+<br>
+<br>
+<button onclick="kiem_tra()">Kiểm tra</button>
+
+<p id="result"></p>
+
+<script src="chi_so_can_nang.js"></script>
+<script>
+    function kiem_tra() {
+        let weght = document.getElementById("weght").value;
+        let tall = document.getElementById("tall").value;
+        let bmi = weght / ( Math.pow(tall, 2) )
+        let result = "";
+
+        if (bmi < 16)
+            result = "Gầy quá đáng. Ăn thật nhiều vào nhé" + "<img src = 'data:image/jpeg;base64,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'>";
+        else if (bmi < 17)
+            result = "Gầy sơ sơ"
+        else if (bmi < 18.5)
+            result = "Thân hình hơi gầy 1 tí ,đề nghị luôn giữ sức khỏe"
+        else if (bmi < 25)
+            result = "Thân hình hoàn toàn bình thường, bạn là siu mão"
+        else if (bmi < 30)
+            result = "Thân hình hơi béo 1 tí, tập thể dục tí đi"
+        else if (bmi < 35)
+            result = "Thân hình hơi béo 2 tí, để nghị ăn ít lai"
+        else if (bmi < 40)
+            result = "Mập quá rồi đấy, chuẩn bị lăn đi"
+        else
+            result = "Ôi đề nghị xuống bớt, heo mi heo mi" + "<img src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr6waGeSOW-7i-doixVJqs4EPWARZAOSvy7PT1oRVyhA&s' width='200' height= '200'>"
+
+        document.getElementById("result").innerHTML = "Chỉ số BMI là: " + bmi + ". Bạn " + "<b>"+ result + "</b>";
+    }
+</script>
+</body>
+</html>
