@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền hoa hồng</title>
+</head>
+<body>
+<script>
+    let saleMoney = parseInt(prompt("Doanh số tháng này của bạn là: đơn vị triệu(X000000)"));
+    let commission ;
+    if (saleMoney >= 7) {
+        commission = saleMoney * 5 / 100;
+    } else if (earnMoney >= 10) {
+        commission = saleMoney * 5 / 100;
+    } else if (saleMoney >= 15) {
+        commission = saleMoney * 6 / 100;
+    } else {
+        alert("không có hoa hồng");
+    }
+    alert("Số tiền hoa hồng bạn nhận được là: " + commission*100 + "nghìn đồng");
+</script>
+
+</body>
+</html>
