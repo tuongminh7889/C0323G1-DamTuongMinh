@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 2 dùng let</title>
+</head>
+<body>
+<script>
+
+    let delta=((numberB*numberB)-(4*numberA*numberC));
+   if (delta<0){
+           alert("Phương trình bậc 2 vô nghiệm");}
+   else if (delta==0) {
+       let numberA = parseInt(prompt("nhập vào già trị A của phương trình: Điều kiện A != 0"));
+       let numberB = parseInt(prompt("nhập vào giá trị B của phương trình:"));
+       let numberC = parseInt(prompt("nhập vào giá trị C của phương trình"));
+       let valueX1 = valueX2 = ((0 - numberB) / (2 * numberA));
+           alert(" Phương trình bậc 2 có nghiệm kép : X1=X2= -B/2A =" + valueX1);}
+       else
+           if (delta > 0) {
+               let numberA = parseInt(prompt("nhập vào già trị A của phương trình: Điều kiện A != 0"));
+               let numberB = parseInt(prompt("nhập vào giá trị B của phương trình:"));
+               let numberC = parseInt(prompt("nhập vào giá trị C của phương trình"));
+               valueX1 = (((0 - numberB) - (delta / delta)) / (2 * numberA));
+               valueX2 = (((0 - numberB) + (delta / delta)) / (2 * numberA));
+               alert("Phương trình bậc 2 có 2 nghiệm X1=" + valueX1 + "X=" + valueX2);}
+           else
+               alert("nhập sai xin nhập lại")
+
+       
+</script>
+</body>
+</html>
