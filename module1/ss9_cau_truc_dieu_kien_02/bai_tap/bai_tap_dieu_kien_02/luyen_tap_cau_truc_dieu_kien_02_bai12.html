@@ -6,12 +6,12 @@
 </head>
 <body>
 <script>
-  //A = P*(1 + r)^n
-  - A là số tiền mà quý khách nhận được trong tương lai.
-  - P là số tiền gốc quý khách bỏ ra để đầu tư ban đầu. -
-  r là lãi suất hằng tháng.
-  - n là số chu kỳ thực hiện lãi kép ;
-  let numberA=p
+  let numberA ;
+  let numberP=prompt("Số tiền bạn vay ban đầu");
+  let numberR=prompt("lãi suất bạn vay %/tháng");
+  let numberN=prompt("số tháng bạn vay");
+  numberA=(numberP*(Math.pow((1+numberR),numberR)));
+  alert("số tiền bạn phải trả"+numberA);
 </script>
 </body>
 </html>
