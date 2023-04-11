@@ -8,14 +8,14 @@
 <script>
     let saleMoney = parseInt(prompt("Doanh số tháng này của bạn là: đơn vị triệu(X1000000)"));
     let commission ;
-    if (saleMoney >= 20)
-        commission = saleMoney * 5 / 100;
-     else if (saleMoney >= 10)
-        commission = saleMoney * 4 / 100;
-     else if (saleMoney >= 5)
-        commission = saleMoney * 3 / 100;
-     else
-        alert("không có hoa hồng");
+    if (saleMoney >= 20){
+        commission = saleMoney * 5 / 100;}
+     else if (saleMoney >= 10){
+        commission = saleMoney * 4 / 100;}
+     else if (saleMoney >= 5){
+        commission = saleMoney * 3 / 100;}
+     else{
+        alert("không có hoa hồng");}
 
     alert("Số tiền hoa hồng bạn nhận được là: " + commission*1000 + "nghìn đồng");
 </script>
