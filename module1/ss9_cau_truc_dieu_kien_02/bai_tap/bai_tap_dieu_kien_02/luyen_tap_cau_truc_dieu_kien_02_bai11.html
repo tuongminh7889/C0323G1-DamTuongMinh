@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập</title>
+</head>
+<body>
+<script>
+    var saleMoney = parseInt(prompt("Tổng thu nhập tháng này của bạn là: đơn vị triệu(X1000000)"));
+    var commission ;
+    if (saleMoney >= 100){
+        commission = saleMoney * 5 / 100;}
+    else if (saleMoney >= 50){
+        commission = saleMoney * 4 / 100;}
+    else if (saleMoney >= 20){
+        commission = saleMoney * 3 / 100;}
+    else{
+        alert("không bị đánh thuế");}
+
+    alert("bạn phải đóng thuế : " + commission*1000 + "nghìn đồng");
+</script>
+
+</body>
+</html>

@@ -5,6 +5,16 @@
     <title>Kiểm tra cạnh tam giác</title>
 </head>
 <body>
-
+<script>
+    let numberA=prompt("nhập thông số cạnh A");
+    let numberB=prompt("nhâp thông số cạnh B");
+    let numberC=prompt("nhập thông số cạnh C");
+    if ((numberA+numberB+numberC)>0 && ((numberA+numberC)>numberB) && ((numberA+numberB)>numberC) &&((numberB+numberC)>numberA))
+    {
+        alert("đó là 3 cạnh của tam giác");
+    } else {
+       alert ("đây hổng phải 3 cạnh của tam giác");
+    }
+</script>
 </body>
 </html>

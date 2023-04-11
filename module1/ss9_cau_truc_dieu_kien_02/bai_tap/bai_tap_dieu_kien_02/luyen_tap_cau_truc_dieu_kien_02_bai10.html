@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình tính giá điên</title>
+</head>
+<body>
+<script>
+  var numberE=parseInt(prompt("nhập số điện của bạn:"));
+  var bill;
+  if (numberE>400){
+      bill=numberE*2000;
+      alert("Bậc thang6 ,số tiền bạn phải trả"+bill+"nghìn đồng");}
+  else if(numberE>300){
+      bill=numberE*1800;
+      alert("Bậc thang5, số tiền bạn phải trả"+bill+"nghìn đồng");}
+  else if(numberE>200){
+      bill=numberE*1500;
+      alert("Bậc thang4, số tiền bạn phải trả"+bill+"nghìn đồng");}
+  else if(numberE>100){
+      bill=numberE*1300;
+      alert("Bậc thang3, số tiền bạn phải trả"+bill+"nghìn đồng");}
+  else if(numberE>50){
+      bill=numberE*1000;
+      alert("Bậc thang2, số tiền bạn phải trả"+bill+"nghìn đồng");}
+  else if(numberE>0){
+      bill=numberE*800;
+      alert("Bậc thang5, số tiền bạn phải trả"+bill+"nghìn đồng");}
+  else { alert("Nhập sai số liệu , đề nghị nhập lại")}
+  //Bậc thang 1	0 - 50	1678
+  //  Bậc thang 2	51 - 100	1734
+   // Bậc thang 3	101 - 200	2014
+    //Bậc thang 4	201 - 300	2536
+    //Bậc thang 5	301 - 400	2834
+    //Bậc thang 6	Trên 400	2927
+   // Cách tính tiền điện theo kWh
+ //   Công thức tính mức bậc thang:
+//
+ //       Mti = (Mqi / T) * N
+//
+  //  Trong đó:
+//
+  //      Mti: Mức bậc thang tiền điện của hộ gia đình (kWh).
+//
+  //      Mqi: Mức bậc thang thứ i theo quy định (kWh).
+//
+  //      T: Số ngày của tháng trước liền kề (ngày).
+//
+  //      N: Số ngày tính tiền (ngày).
+//
+  //      Sau khi tính ra mức bậc thang, bạn lấy mức bậc thang đó nhân giá bán lẻ và cộng VAT 10% sẽ ra số tiền.
+    </script>
+</body>
+</html>
