@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
+</head>
+
+<body>
+<h1>Bảng cửu chương đến 9</h1>
+<script>
+    let multiTable, i, j;
+    multiTable = "<table border='2' width='1200' cellspacing='1' cellpadding='5'>";
+    debugger;
+    for (i = 1; i <= 9; i++) {
+        multiTable = multiTable + "<tr>";
+        for (j = 2; j <= 9; j++) {
+            multiTable = multiTable + "<td>" + j + "*" + i + "=" + i * j + "</td>";
+        }
+        multiTable = multiTable + "</tr>";
+        // j = 1;
+    }
+    multiTable = multiTable + "</table>";
+    document.write(multiTable);
+</script>
+</body>
+</html>
