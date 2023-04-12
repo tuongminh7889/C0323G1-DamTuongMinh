@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20 số đầu trong Dãy fibonaci</title>
+</head>
+<body>
+<script>
+    let number1 = 0;
+    let number2 = 1;
+    let constF;
+    for (let i = 1; i <= 20; i++) {
+        document.write("dãy fibonaci số thứ tự thứ " + i + "là" + number1 + "<br>");
+        constF = number1 + number2;
+        number1 = number2;
+        number2 = constF;
+    }
+</script>
+</body>
+</html>

@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Điều chỉnh nhiệt độ</title>
+    <title>Cảnh báo nhiệt độ</title>
 </head>
 <body>
 <script>
-  do{
-      let tem=prompt("nhập vào nhiệt độ");
-      while (tem<20) {
-          alert("tăng")
-      }
-  }
-
+    let tem = prompt("Nhập nhiệt độ hiện tại");
+    while (tem < 20 || tem > 100) {
+        if (tem < 20) {
+            tem = prompt("Yêu cầu tăng nhiệt độ lên");
+        } else {
+            tem = prompt("Yêu cầu giảm nhiệt độ xuống");
+        }
+    }
+    alert("Nhiệt độ hiện tại là " + tem + " nhiệt độ chuẩn. Dừng điều khiển");
 </script>
 </body>
 </html>
