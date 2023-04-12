@@ -13,7 +13,7 @@
     for (let i = 2; i >1; i++) {
       if (countSNT < number)
       {
-        for (let j = 1; j <= i; j++)
+        for (let j = 1; j <= i; j++) // nếu let j=2 --> countDiv ==1
         {
           if (i % j == 0)
           {
@@ -22,7 +22,7 @@
         }
        if (countDiv == 2)
        {
-          document.write(i + "<br>");
+          document.write("số nguyên tố thứ"+countSNT+"là"+i + "<br>");
           countSNT += 1;
       }
         countDiv = 0;
