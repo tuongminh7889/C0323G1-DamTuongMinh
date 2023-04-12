@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Xếp hạng học lực</title>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
 </head>
 <body>
 <script>
-  let poin = +prompt("Điểm kiểm tra: ", 0);
-  let midPoin = +prompt("Điểm kiểm tra giữa kỳ: ", 0);
-  let finalPoin = +prompt("Điểm kiểm tra cuối kỳ: ", 0);
-  let average = (poin+(midPoin*2)+(finalPoin*3))/6;
-  if (average >= 8){
-    alert("Giỏi");}
-  else if (average >= 6){
-    alert("Khá");}
-  else if (average >= 4){
-    alert("Trung bình");}
-  else{
-    alert("Yếu");}
+    let poin = +prompt("Điểm kiểm tra: ", 0);
+    let midPoin = +prompt("Điểm kiểm tra giữa kỳ: ", 0);
+    let finalPoin = +prompt("Điểm kiểm tra cuối kỳ: ", 0);
+    let average = (poin + (midPoin * 2) + (finalPoin * 3)) / 6;
+    if (average >= 8) {
+        alert("Giỏi");
+    } else if (average >= 6) {
+        alert("Khá");
+    } else if (average >= 4) {
+        alert("Trung bình");
+    } else {
+        alert("Yếu");
+    }
 </script>
 </body>
 </html>

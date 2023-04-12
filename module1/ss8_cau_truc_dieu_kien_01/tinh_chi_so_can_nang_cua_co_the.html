@@ -7,11 +7,11 @@
 </head>
 <body>
 <h1>Tính chỉ số cân nặng</h1>
-<label for="weght"> Nhập cân nặng:  (kg)</label>
+<label for="weght"> Nhập cân nặng: (kg)</label>
 <input type="text" name="" id="weght">
 <br>
 <br>
-<label for="tall"> Nhập chiều cao:  (m)</label>
+<label for="tall"> Nhập chiều cao: (m)</label>
 <input type="text" name="" id="tall">
 <br>
 <br>
@@ -24,7 +24,7 @@
     function kiem_tra() {
         var weght = document.getElementById("weght").value;
         var tall = document.getElementById("tall").value;
-        var bmi = weght / ( Math.pow(tall, 2) );
+        var bmi = weght / (Math.pow(tall, 2));
         var result = "";
 
         if (bmi < 16) {
@@ -33,18 +33,18 @@
             result = "Gầy sơ sơ";
         } else if (bmi < 18.5) {
             result = "Thân hình hơi gầy 1 tí ,đề nghị luôn giữ sức khỏe";
-        }else if (bmi < 25) {
+        } else if (bmi < 25) {
             result = "Thân hình hoàn toàn bình thường, bạn là siu mão";
         } else if (bmi < 30)
             result = "Thân hình hơi béo 1 tí, tập thể dục tí đi";
         else if (bmi < 35) {
             result = "Thân hình hơi béo 2 tí, để nghị ăn ít lai";
-        }else if (bmi < 40)
+        } else if (bmi < 40)
             result = "Mập quá rồi đấy, chuẩn bị lăn đi";
         else {
             result = "Ôi đề nghị xuống bớt, heo mi heo mi" + "<img src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr6waGeSOW-7i-doixVJqs4EPWARZAOSvy7PT1oRVyhA&s' width='200' height= '200'>";
         }
-        document.getElementById("result").innerHTML = "Chỉ số BMI là: " + bmi + ". Bạn " + "<b>"+ result + "</b>";
+        document.getElementById("result").innerHTML = "Chỉ số BMI là: " + bmi + ". Bạn " + "<b>" + result + "</b>";
     }
 </script>
 </body>

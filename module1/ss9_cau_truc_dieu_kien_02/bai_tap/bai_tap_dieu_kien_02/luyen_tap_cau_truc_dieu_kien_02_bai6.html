@@ -6,20 +6,20 @@
 </head>
 <body>
 <script>
-    alert("phương trình bậc:  1 Ax + B = 0")    ;
+    alert("phương trình bậc:  1 Ax + B = 0");
     //ax + b = 0
-    let numberA=parseInt(prompt("Nhập giá trị A của phương trinh:")) ;
-    let numberB=parseInt(prompt("nhập giá trị B của phương trinh:")) ;
-    let valueX ;
-    if (numberB==0) {
-        if (numberA ==0) {
-            alert ("Phương trình vô số nghiệm");
-        } else alert ("Phương trình vô nghiệm");
-    } else if (numberA==0) {
+    let numberA = parseInt(prompt("Nhập giá trị A của phương trinh:"));
+    let numberB = parseInt(prompt("nhập giá trị B của phương trinh:"));
+    let valueX;
+    if (numberB == 0) {
+        if (numberA == 0) {
+            alert("Phương trình vô số nghiệm");
+        } else alert("Phương trình vô nghiệm");
+    } else if (numberA == 0) {
         alert("Phương trình vô nghiệm");
-    }else {
-        valueX= ((0-numberB)/numberA) ;
-        alert("Nghiệm phương trình X="+valueX);
+    } else {
+        valueX = ((0 - numberB) / numberA);
+        alert("Nghiệm phương trình X=" + valueX);
     }
 </script>
 </body>

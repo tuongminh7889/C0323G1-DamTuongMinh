@@ -6,24 +6,24 @@
 </head>
 <body>
 <script>
-    alert (" phương trinh bậc 2 : Ax.x + Bx + C = 0");
-    var numberA=parseInt(prompt("nhập vào già trị A của phương trình: Điều kiện A != 0"));
-    var numberB=parseInt(prompt("nhập vào giá trị B của phương trình:"));
-    var numberC=parseInt(prompt("nhập vào giá trị C của phương trình"));
-    var valueX1 ;
-    var valueX2 ;
-    var delta=((numberB*numberB)-(4*numberA*numberC));
-   // var deltaComma=((numberB*numberB)-(numberA*numberC));
-   // var numberBComma=(numberB/2);
-    if (delta<0) {
+    alert(" phương trinh bậc 2 : Ax.x + Bx + C = 0");
+    let numberA = parseInt(prompt("nhập vào già trị A của phương trình: Điều kiện A != 0"));
+    let numberB = parseInt(prompt("nhập vào giá trị B của phương trình:"));
+    let numberC = parseInt(prompt("nhập vào giá trị C của phương trình"));
+    let valueX1;
+    let valueX2;
+    let delta = ((numberB * numberB) - (4 * numberA * numberC));
+    // var deltaComma=((numberB*numberB)-(numberA*numberC));
+    // var numberBComma=(numberB/2);
+    if (delta < 0) {
         alert("Phương trình bậc 2 vô nghiệm");
-    } else if (delta==0){
-        valueX1=valueX2=((0-numberB)/(2*numberA));
-        alert(" Phương trình bậc 2 có nghiệm kép : X1=X2= -B/2A ="+valueX1);
-    }else if (delta>0) {
-        valueX1=(((0-numberB)-(delta/delta))/(2*numberA));
-        valueX2=(((0-numberB)+(delta/delta))/(2*numberA));
-        alert("Phương trình bậc 2 có 2 nghiệm X1="+valueX1+"X="+valueX2);
+    } else if (delta == 0) {
+        valueX1 = valueX2 = ((0 - numberB) / (2 * numberA));
+        alert(" Phương trình bậc 2 có nghiệm kép : X1=X2= -B/2A =" + valueX1);
+    } else if (delta > 0) {
+        valueX1 = (((0 - numberB) - (delta / delta)) / (2 * numberA));
+        valueX2 = (((0 - numberB) + (delta / delta)) / (2 * numberA));
+        alert("Phương trình bậc 2 có 2 nghiệm X1=" + valueX1 + "X=" + valueX2);
     }//else alert ("nhập dữ liệu sai ! Xin nhập lại");
     //if (deltaComma<0) {
     //    alert("Phương trình bậc 2 vô nghiệm");
@@ -31,9 +31,9 @@
     //    valueX1=valueX2=((0-numberBComma)/numberA);
     //    alert("Nghiệm của phương trình bậc 2 : X1=X2= -B'/2A ="+valueX1);
     //} else if (deltaComma>0){
-     //   valueX1=(((0-numberBComma)-(deltaComma/deltaComma))/numberA);
-      //  valueX2=(((0-numberBComma)+(deltaComma/deltaComma))/numberA);
-       // alert("Phương trình bậc 2 có 2 nghiệm X1="+valueX1+"X="+valueX2);
+    //   valueX1=(((0-numberBComma)-(deltaComma/deltaComma))/numberA);
+    //  valueX2=(((0-numberBComma)+(deltaComma/deltaComma))/numberA);
+    // alert("Phương trình bậc 2 có 2 nghiệm X1="+valueX1+"X="+valueX2);
     //}
 </script>
 </body>

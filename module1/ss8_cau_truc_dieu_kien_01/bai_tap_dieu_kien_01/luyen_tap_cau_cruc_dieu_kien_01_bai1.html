@@ -5,12 +5,12 @@
     <title>Bài 1</title>
 </head>
 <body>
-    <label>Nhập vào số a <input type="number" id="numberA"></label><br>
-    <label>Nhập vào số b <input type="number" id="numberB"></label><br>
-    <label>
-        <button type="button" onclick="getValue()">Kết quả</button>
-    </label><br>
-    <div id="result"></div>
+<label>Nhập vào số a <input type="number" id="numberA"></label><br>
+<label>Nhập vào số b <input type="number" id="numberB"></label><br>
+<label>
+    <button type="button" onclick="getValue()">Kết quả</button>
+</label><br>
+<div id="result"></div>
 </form>
 </body>
 <script>
@@ -18,14 +18,12 @@
         let numberA = +document.getElementById("numberA").value;
         let numberB = +document.getElementById("numberB").value;
         if (numberB !== 0) {
-            if (!(numberA % numberB)) {
+            if (numberA % numberB===0) {
                 document.getElementById('result').innerText = 'a chia hết cho b';
             } else {
                 document.getElementById('result').innerText = 'a không chia hết cho b';
             }
-        }
-        else
-        {
+        } else {
             document.getElementById('result').innerText = 'nhập sai,xin nhập lại';
         }
 
