@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 30 số đầu chia hết cho 7</title>
+</head>
+<body>
+<script>
+    let total = 0;
+    let count = 0;
+    let number = 0;
+    while (count < 30) {
+        if (number % 7 == 0) {
+            count += 1;
+            total = total + number;
+            document.write("số thứ " + count + "chia hết cho 7 là" + number + "<br>");
+        }
+        number++;
+    }
+    document.write("tổng của" + count + " số đầu chia hết cho 7 là" + total);
+</script>
+</body>
+</html>
