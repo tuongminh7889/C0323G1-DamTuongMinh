@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dự đoán số </title>
+</head>
+<body>
+<button onclick="checkNum()">Chơi</button>
+<script>
+    function checkNum() {
+        let number = +prompt("Từ 0 đến mấy?")
+        let numberCheck = +prompt("Đoán thử xem");
+        let count = 0;
+        let randomNumber = Math.floor(Math.random() * number);
+        while (numberCheck !== randomNumber) {
+            count++;
+            if (count === 4) {
+                alert("Bạn hết lượt,mời nạp thẻ")
+                break;
+            } else if (numberCheck < randomNumber) {
+                alert("Gần đúng,tăng lên 1 vài số");
+            } else {
+                alert("Gần đúng rồi, xuống vài số xem")
+            }
+            numberCheck = +prompt("Thử lại lần nữa");
+        }
+        if (count === 4) {
+            document.write("Hết lượt rồi,mời nạp thẻ")
+        } else if (randomNumber === numberCheck) {
+            document.write("Bingo !!! Jackpot X100, kết thúc lượt chơi");
+        }
+    }
+</script>
+</body>
+</html>
