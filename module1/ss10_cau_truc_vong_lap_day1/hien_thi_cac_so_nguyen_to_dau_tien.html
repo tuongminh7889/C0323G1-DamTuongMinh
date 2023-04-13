@@ -6,29 +6,25 @@
 </head>
 <body>
 <script>
-          let countDiv = 0;
-        let countSNT = 0;
-        for (let i = 2; i >1; i++) {
-            if (countSNT < 20)
+    let countDiv = 0;
+    let countSNT = 0;
+    for (let i = 2; i > 1; i++) {
+        if (countSNT < 20) {
+            for (let j = 1; j <= i; j++) // nếu let j=2 --> countDiv ==1
             {
-                for (let j = 1; j <= i; j++) // nếu let j=2 --> countDiv ==1
-                {
-                    if (i % j == 0)
-                    {
-                        countDiv += 1;
-                    }
+                if (i % j == 0) {
+                    countDiv += 1;
                 }
-                if (countDiv == 2)
-                {
-                    document.write("số nguyên tố thứ"+(countSNT+1)+"là"+i + "<br>");
-                    countSNT += 1;
-                }
-                countDiv = 0;
-            } else
-            {
-                break;
             }
+            if (countDiv == 2) {
+                document.write("số nguyên tố thứ" + (countSNT + 1) + "là" + i + "<br>");
+                countSNT += 1;
+            }
+            countDiv = 0;
+        } else {
+            break;
         }
+    }
 
 </script>
 </body>
