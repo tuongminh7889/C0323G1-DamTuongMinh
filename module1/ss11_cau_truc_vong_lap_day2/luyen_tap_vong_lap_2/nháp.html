@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>draw</title>
+</head>
+<body>
+<script>
+
+    int main() {
+        int n,i,j;
+
+        n = 6;
+
+        printf("Ve tam giac sao vuong can:\n");
+        for(i = 0; i < n; i++) {
+            for(j=0; j<i; j++)
+                printf("  ");
+
+            for(j=i; j < n; j++)
+                printf(" *");
+
+            printf("\n");
+
+        }
+
+        return 0;
+    }
+</script>
+</body>
+</html>
