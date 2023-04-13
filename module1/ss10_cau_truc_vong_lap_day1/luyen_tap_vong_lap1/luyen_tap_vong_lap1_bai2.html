@@ -6,15 +6,18 @@
 </head>
 <body>
 <script>
-    let tem = prompt("Nhập nhiệt độ hiện tại");
-    while (tem < 20 || tem > 100) {
+    let tem;
+    do {
+        tem = prompt("Nhập nhiệt độ hiện tại");
         if (tem < 20) {
-            tem = prompt("Yêu cầu tăng nhiệt độ lên");
+            alert("Quá lạnh !!! Yêu cầu tăng nhiệt độ lên");
+        } else if (tem > 100) {
+            alert("Quá nóng !!! Yêu cầu giảm nhiệt độ xuống");
         } else {
-            tem = prompt("Yêu cầu giảm nhiệt độ xuống");
+            alert("nhiệt độ " + tem + " là chuẩn! Dừng lệnh !")
         }
     }
-    alert("Nhiệt độ hiện tại là " + tem + " nhiệt độ chuẩn. Dừng điều khiển");
+    while (tem < 20 || tem > 100);
 </script>
 </body>
 </html>
