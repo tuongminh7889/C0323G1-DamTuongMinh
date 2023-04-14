@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<script>
+    let eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+    let vn = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+    let string = prompt("Nhập vào từ tiếng anh");
+    let indexEng = 0;
+    let result = "";
+    for (let i = 0; i < eng.length; i++) {
+        if (string !== eng[i]) {
+            alert("từ:" + string + "không có trong từ điển");
+            break;
+        } else {
+            indexEng = i;
+            for (let j = 0; j < vn.length; j++) {
+                if (indexEng == j) {
+                    result = vn[j];
+                }
+            }
+            alert("nghĩa của từ: " + string + " là " + result);
+            break;
+        }
+    }
+</script>
+</body>
+</html>
