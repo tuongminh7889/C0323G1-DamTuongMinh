@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nối mảng</title>
+</head>
+<body>
+<script>
+    // //bài 1 : Nối mảng
+    let myColor = ["Red", "Green", "White", "Black"];
+    document.write(myColor.join(','));
+    document.write("<br>")
+    // //bài 2 : Chèn dấu - giữa số chắn.
+    let num = prompt();
+    let str = num.toString();
+    for (let x = 0; x < str.length; x++) {
+        if ((str[x - 1] % 2 === 0) && (str[x] % 2 === 0)) {
+            document.write('-', str[x]);
+        } else {
+            document.write(str[x]);
+        }
+    }
+    document.write("<br>");
+    //bài 3: Chuyển chữ thường thành hoa và ngược lại
+    let strs = prompt();
+    let hoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let thuong = 'abcdefghijklmnopqrstuvwxyz';
+    for (let x = 0; x < strs.length; x++) {
+        if (hoa.includes(strs[x])) {
+            document.write(strs[x].toLowerCase());
+        } else if (thuong.includes(strs[x])) {
+            document.write(strs[x].toUpperCase());
+        } else {
+            document.write(strs[x]);
+        }
+    }
+</script>
+</body>
+</html>
