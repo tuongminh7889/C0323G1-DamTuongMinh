@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị vị trí trong mảng</title>
+</head>
+<body>
+<script>
+    let arrInt = [8, 12, 78, 14, 41, 10, 87, 7, 1, 2];
+    let max = arrInt[0];
+    for (let i = 0; i < arrInt.length; i++) {
+        if (max < arrInt[i]) {
+            max = arrInt[i];
+        }
+    }
+    document.write("số lớn nhất là" + max + " và nằm ở vị trí" + (arrInt.indexOf(max)+1));
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giá trị cuả mảng</title>
+</head>
+<body>
+<script>
+    let arrInt = [8, 12, 78, 14, 41, 10, 87, 7, 1, 2];
+    let max = arrInt[0];
+    let sum = 0;
+    for (let i = 0; i < arrInt.length; i++) {
+        if (max < arrInt[i]) {
+            max = arrInt[i];
+        }
+        sum += arrInt[i];
+    }
+    document.write("Số lớn nhất trong mảng là: " + max + "<br>" + " Giá trị trung bình trong mảng là:" + sum / arrInt.length);
+</script>
+</body>
+</html>
