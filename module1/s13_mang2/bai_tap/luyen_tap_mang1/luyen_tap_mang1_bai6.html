@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra phần tử mảng </title>
+</head>
+<body>
+<script>
+    let arrInt = [10];
+    for (let i = 0; i < 10; i++) {
+        arrInt[i] = prompt("Nhập các số vào trong mảng:(không quá 10 phần tử) ");
+    }
+    let v = prompt("Nhập vào số V bạn muốn kiểm tra ");
+    let flag = false;
+    for (let i = 0; i < arrInt.length - 1; i++) {
+        if (arrInt[i] === v) {
+            flag = true;
+            document.write("V is in the array" + "<br>");
+            break;
+        }
+    }
+    if (flag === false) {
+        document.write("V is not in the array" + "<br>");
+    }
+    document.write("các số nằm trong mảng của bạn là" + arrInt)
+</script>
+</body>
+</html>

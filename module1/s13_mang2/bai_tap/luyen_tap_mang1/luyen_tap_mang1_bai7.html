@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra phần tử mảng và xóa nó</title>
+</head>
+<body>
+<script>
+    let arrInt = [10];
+    let index = "";
+    for (let i = 0; i < 10; i++) {
+        arrInt[i] = prompt("Nhập các số vào trong mảng:(không quá 10 phần tử) ");
+    }
+    let v = prompt("Nhập vào số V bạn muốn kiểm tra ");
+    for (let i = 0; i < arrInt.length - 1; i++) {
+        if (arrInt[i] === v) {
+            alert("V is in the array,delete V");
+            index += i;
+            break;
+        }
+    }
+    arrInt.push("");
+    arrInt[index] = arrInt[10]
+    document.write("các số nằm trong mảng của bạn là" + arrInt)
+</script>
+</body>
+</html>
