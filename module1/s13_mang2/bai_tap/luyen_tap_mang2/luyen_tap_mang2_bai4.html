@@ -2,30 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đếm số ký tự mảng</title>
+    <title>Bài 4</title>
 </head>
 <body>
+
+</body>
 <script>
-    let string = prompt("Nhập chuỗi muốn chọn");
-    let arr = string.split("");
-    document.write("Chuổi đc nhập mảng" + arr);
-    var count = 0;
-    var count1 = 0;
-    var count2 = 0;
-    var count3= 0 ;
-    for (let i = 0; i < string.length; i++) {
-        if (isNaN(arr[i])) {
-            count++;
-            document.write("Chữ cái và ký tự thứ " + count + "là:" + arr[i] + "<br>")
-        } else if (arr[i] === " ") {
-            count1++;
-            document.write("Khoảng trắng thứ" + count1 + "xuất hiên" + "<br>");
-        } else {
-            count2++;
-            document.write("Số thứ" + count2 + "là:" + arr[i] + "<br>");
+    let str = prompt('nhập vào 1 chuỗi');
+    let arr = str.split(" ");
+    let word;
+    count = 0;
+    for (let i in arr) {
+        for (let j in arr[i]) {
+            if (arr[i][j] === " ") {
+                word = false;
+                break;
+            } else {
+                count++;
+                break;
+            }
         }
     }
-    alert("Tổng chữ cái và ký tự trong chuỗi là " + count + "\n" + "Tổng số ký tự số" + count2 + "\n" + "Tổng khoảng trắng là" + count1);
+    document.write(" Chuỗi gồm " + count + "từ")
 </script>
-</body>
 </html>
