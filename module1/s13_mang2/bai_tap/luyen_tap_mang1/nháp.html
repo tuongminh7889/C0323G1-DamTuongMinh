@@ -2,15 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài tập 8</title>
 </head>
 <body>
+<p>Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm
+    dần và hiển thị ra mảng đã được sắp xếp.</p>
+<p id="result"></p>
 <script>
-    let arr1 = [1,2,3,4,5];
-   // let arr2 = [3,2];
-
- arr1[10]= arr1[1];
-    document.write(arr1);
+    let arr = [];
+    let newArr = [];
+    let countMax = 0;
+    while (arr.length < 10) {
+        arr.push(+prompt('Nhập 10 số nguyên đi nào'));
+    }
+    let arrText = arr.toString()
+    let max = arr[0];
+    let min = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max && arr[i] !== 'x') {
+                max = arr[i];
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == max) {
+                countMax++;
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        for (let i = 0; i < countMax; i++) {
+            newArr.push(max);
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == max) {
+                arr[i] = "x";
+            }
+        }
+        countMax = 0;
+        max = min;
+    }
+    document.getElementById('result').innerHTML = 'Dãy ban đầu là ' + arrText + '<br>' + 'Dãy xếp từ lớn tới nhỏ là ' + newArr;
 </script>
 </body>
 </html>

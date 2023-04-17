@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So Sánh mảng</title>
+</head>
+<body>
+<script>
+    let string1 = prompt("Nhập chuỗi 1 ");
+    let string2 = prompt("Nhập chuôi 2 ");
+    let arr1 = string1.split("");
+    let arr2 = string2.split("");
+    var count = 0;
+    var count1 = 0;
+    let max = arr1.length;
+    if (arr1.length < arr2.length) {
+        max = arr2.length;
+    }
+    for (let i = 0; i < max; i++) {
+        if (arr1[i] === arr2[i]) {
+            count++;
+            document.write(" 2 Chuỗi trên giống nhau " + count + " lần ở vị trí thứ " + (i + 1) + "<br>");
+        } else {
+            count1++;
+            document.write(" Ở vị trí phần tử thứ " + (i + 1) + " phần tử " + arr1[i] + " khác phần tử " + arr2[i]+"<br>");
+        }
+    }
+    if (count === max) {
+        alert("2 chuỗi giống nhau toàn bộ, hãy xem thống kê");
+    } else {
+        alert("2 chuỗi khác nhau, hay xem thống kê")
+        document.write("2 chuỗi trên khác nhau ở" + count1 + "vị trí");
+    }
+</script>
+</body>
+</html>

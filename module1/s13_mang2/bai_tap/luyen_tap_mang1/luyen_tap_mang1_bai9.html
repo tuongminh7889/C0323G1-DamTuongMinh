@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nối 2 mảng</title>
+</head>
+<body>
+<script>
+    let arrA = [];
+    for (let i = 0; i < 10; i++) {
+        arrA[i] = prompt("Mời nhập phần tử thứ " + (i + 1) + " vào mảng A:");
+    }
+    let arrB = [];
+    for (let j = 0; j < 10; j++) {
+        arrB[j] = prompt("Mời nhập phần tử thứ " + (j + 1) + " vào mảng B :");
+    }
+    let arrC = arrB.concat(arrA);
+    document.write("Mảng C được nối từ mảng B và mảng A :" + "<hr>" + arrC);
+</script>
+</body>
+</html>
