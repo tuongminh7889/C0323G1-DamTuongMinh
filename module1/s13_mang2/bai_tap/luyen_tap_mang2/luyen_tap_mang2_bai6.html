@@ -6,19 +6,19 @@
 </head>
 <body>
 <script>
-    let arr1 = [];
-    let arr2 = [];
+    let arr = [];
     let num = +prompt("Bạn muốn nhập bao nhiêu KÝ TỰ vào mảng ");
-    for (let i = 0; i < (num-1); i++) {
-        arr1[i] = prompt(" Ký tự thứ " + (i + 1) + "Bạn muốn nhâp :");
-        if (arr1[i] !== "-") {
-            arr2[i] = arr1.push(arr1.i);
-        } else {
-            arr2[i] = arr1.push("_") ;
+    for (let i = 0; i < num ; i++) {
+        arr[i] = prompt(" Ký tự thứ " + (i + 1) + "Bạn muốn nhâp :");
+    }
+    for(let j in arr) {
+        if(arr[j] === "-")
+        {
+            arr[j] = "_";
         }
     }
-    document.write("Mảng ký tự bạn nhâp vào là :" + arr1 + "<br>");
-    document.write("Mảng ký tự sau khi thay đổi là:" + arr2);
+    document.write("Mảng ký tự sau thay đổi :" + arr );
+
 </script>
 </body>
 </html>
