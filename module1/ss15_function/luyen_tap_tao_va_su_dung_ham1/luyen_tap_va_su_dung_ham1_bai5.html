@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1 - Bài 5</title>
+</head>
+<body>
+<script>
+    let star = prompt('Nhập tên ngôi sao');
+    let starArr = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let asterismArr = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    findStar(star);
+
+    function findStar(star) {
+        for (let i = 0; i < starArr.length; i++) {
+            if (starArr[i] == star) {
+                return alert('Ngôi sao ' + star + ' nằm ở chòm sao ' + asterismArr[i]);
+            }
+        }
+        return alert('Không tìm thấy ngôi sao ' + star);
+    }
+</script>
+</body>
+</html>

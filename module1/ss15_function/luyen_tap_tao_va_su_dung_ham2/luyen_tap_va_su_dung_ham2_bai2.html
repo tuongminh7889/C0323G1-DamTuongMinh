@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>diện tích và chu vi hình tròn</title>
+</head>
+<body>
+<script>
+    function tinhDienTich(r) {
+        let C = r * 2 * 3.14;
+        alert('Chu vi của hình tròn có bán kính ' + r + ' bằng ' + C);
+    }
+
+    function tinhChuVi(r) {
+        let S = r * r * 3.14;
+        alert('Diện tích của hình tròn có bán kính ' + r + ' bằng ' + S);
+    }
+
+    let r = +prompt('Nhập bán kính hình tròn');
+    tinhChuVi(r);
+    tinhDienTich(r);
+</script>
+</body>
+</html>
