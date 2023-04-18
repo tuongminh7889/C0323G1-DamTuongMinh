@@ -9,22 +9,16 @@
     let eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
     let vn = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
     let string = prompt("Nhập vào từ tiếng anh");
-    let indexEng = 0;
-    let result = "";
+    var count = 0;
     for (let i = 0; i < eng.length; i++) {
-        if (string !== eng[i]) {
-            alert("từ:" + string + "không có trong từ điển");
-            break;
+        if (string == eng[i]) {
+            alert("nghĩa của từ: " + string + " là " + vn[i]);
         } else {
-            indexEng = i;
-            for (let j = 0; j < vn.length; j++) {
-                if (indexEng == j) {
-                    result = vn[j];
-                }
-            }
-            alert("nghĩa của từ: " + string + " là " + result);
-            break;
+            count++;
         }
+    }
+    if (count === eng.length) {
+        alert(" khong co trong tu dien")
     }
 </script>
 </body>
