@@ -8,16 +8,16 @@
 <script>
     function display(a, b) {
         if (a > b) {
-            return alert('Số ' + a + ' lớn hơn số ' + b);
+            return a;
         } else {
             let sum = a + b;
-            return alert('Tổng của chúng là ' + sum);
+            return sum;
         }
     }
 
     let a = +prompt('Nhập vào số a');
     let b = +prompt('Nhập vào số b');
-    display(a, b);
+    alert(display(a, b));
 
 </script>
 </body>

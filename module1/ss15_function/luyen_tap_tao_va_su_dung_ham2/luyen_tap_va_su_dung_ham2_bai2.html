@@ -7,18 +7,18 @@
 <body>
 <script>
     function tinhDienTich(r) {
-        let C = r * 2 * 3.14;
-        alert('Chu vi của hình tròn có bán kính ' + r + ' bằng ' + C);
+        let c = r * 2 * 3.14;
+        return c;
     }
 
     function tinhChuVi(r) {
-        let S = r * r * 3.14;
-        alert('Diện tích của hình tròn có bán kính ' + r + ' bằng ' + S);
+        let s = r * r * 3.14;
+        return s;
     }
 
     let r = +prompt('Nhập bán kính hình tròn');
-    tinhChuVi(r);
-    tinhDienTich(r);
+    alert("Chu vi hình tròn:" + tinhChuVi(r));
+    alert('diện tích hình tròn:' + tinhDienTich(r));
 </script>
 </body>
 </html>

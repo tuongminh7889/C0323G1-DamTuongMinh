@@ -9,15 +9,15 @@
     let star = prompt('Nhập tên ngôi sao');
     let starArr = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
     let asterismArr = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
-    findStar(star);
+    alert(findStar(star));
 
     function findStar(star) {
         for (let i = 0; i < starArr.length; i++) {
             if (starArr[i] == star) {
-                return alert('Ngôi sao ' + star + ' nằm ở chòm sao ' + asterismArr[i]);
+                return asterismArr[i];
             }
         }
-        return alert('Không tìm thấy ngôi sao ' + star);
+        return false;
     }
 </script>
 </body>

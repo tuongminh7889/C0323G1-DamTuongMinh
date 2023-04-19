@@ -6,38 +6,42 @@
 </head>
 <body>
 <script>
-    let number = parseInt(prompt("Nhập số cần check "));
-    let count = 0;
-    let num = parseInt(prompt("Nhập số lượng số NT "));
-    for (let i = 2; i > 0; i++) {
-        let true = isPrime(i) ;
-        count++;
-        ìf(count < num)
-        {
-            document.write("Số nguyên tố thứ" + i + "<br>" + "là" + count);
-        }
-    }
-
-    function isPrime(number) {
-        let count = 0;
-        let isPrime = false;
-
-        if (number === 0) {
-            alert(number + " không là số nguyên tố")
-        } else {
-            for (let i = 1; i <= number; i++) {
-                if (number % i === 0) {
-                    count += 1;
-                }
-            }
-
-            if (count === 2) {
-                isPrime = true
-            }
-
-        }
-    }
-
+    // let number = parseInt(prompt("Nhập số cần check "));
+    // let count = 0;
+    // let num = parseInt(prompt("Nhập số lượng số NT "));
+    // for (let i = 2; i > 0; i++) {
+    //     let true = isPrime(i) ;
+    //     count++;
+    //     ìf(count < num)
+    //     {
+    //         document.write("Số nguyên tố thứ" + i + "<br>" + "là" + count);
+    //     }
+    // }
+    //
+    // function isPrime(number) {
+    //     let count = 0;
+    //     let isPrime = false;
+    //
+    //     if (number === 0) {
+    //         alert(number + " không là số nguyên tố")
+    //     } else {
+    //         for (let i = 1; i <= number; i++) {
+    //             if (number % i === 0) {
+    //                 count += 1;
+    //             }
+    //         }
+    //
+    //         if (count === 2) {
+    //             isPrime = true
+    //         }
+    //
+    //     }
+    // }
+    n=prompt("");
+    a=1;
+    for (let i = 1; i <=n ; i++) {
+        a=a*i;
+    }alert(a);
 </script>
 </body>
 </html>

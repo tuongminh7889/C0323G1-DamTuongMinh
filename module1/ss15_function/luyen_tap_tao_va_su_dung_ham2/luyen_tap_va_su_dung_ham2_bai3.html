@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+<script>
+    function tinhGiaiThua(num) {
+        let result = 1;
+        for (let i = 1; i <= num; i++) {
+            result = result * i;
+        }
+        return alert("kết quả" + result);
+    }
+
+    let num = prompt("Nhập số :");
+    tinhGiaiThua(num);
+</script>
+</body>
+</html>

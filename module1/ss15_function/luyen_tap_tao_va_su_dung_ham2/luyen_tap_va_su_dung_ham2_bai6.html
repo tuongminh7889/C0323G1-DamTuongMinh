@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check số nguyên dương</title>
+</head>
+<body>
+<script>
+    function checkInt(num) {
+        return !isNaN(num) && num > 0;
+    }
+
+    let num = prompt("nhập vào số muốn kiểm tra:");
+    alert("Kết quả" + checkInt(num));
+</script>
+</body>
+</html>
