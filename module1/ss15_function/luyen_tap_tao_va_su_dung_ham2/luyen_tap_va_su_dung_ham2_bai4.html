@@ -7,11 +7,7 @@
 <body>
 <script>
     function checkSym(sym) {
-        if (!isNaN(sym) && sym !== " ") {
-            return true;
-        } else {
-            return false;
-        }
+        return !isNaN(sym) && sym !== " ";
     }
 
     let sym = prompt("nhập vào ký tự");

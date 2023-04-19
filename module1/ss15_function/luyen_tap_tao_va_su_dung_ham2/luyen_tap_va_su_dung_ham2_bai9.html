@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm xét ký tự</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    num = prompt("Nhập số phần tử cho mảng:");
+    for (let i = 0; i < num; i++) {
+        arr[i] = prompt("Nhâp vào các ký tự mảng");
+    }
+    sym = prompt("Nhập ký tự muốn kiểm tra");
+
+
+    function checkSym(arr, sym) {
+        flag = false;
+        count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === sym) {
+                count++;
+                flag = true;
+            } else {
+                flag = false;
+            }
+        }
+        if (flag === true) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+
+    alert(+checkSym(arr, sym));
+</script>
+</body>
+</html>

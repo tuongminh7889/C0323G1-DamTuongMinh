@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo hàm</title>
+</head>
+<body>
+<script>
+    function revArr(arr) {
+        return arr.reverse();
+    }
+
+    let num = +prompt("Nhập số lượng số nguyên bạn muốn đưa vào mảng:");
+    let arr = [];
+    for (let i = 0; i < num; i++) {
+        arr[i] = prompt("số nguyên thứ" + (i + 1) + "là");
+    }
+    document.write("Thứ tự trước khi đảo bằng hàm: " + arr);
+    document.write("thứ tự sau khi đảo bằng hàm:" + revArr(arr));
+</script>
+</body>
+</html>

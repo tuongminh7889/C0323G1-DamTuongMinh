@@ -6,9 +6,14 @@
 </head>
 <body>
 <script>
-    function changeLoca(a,b) {
-
+    function changeLoca(a, b) {
+        return [b, a]
     }
+
+    let a = prompt("Nhập sô a");
+    let b = prompt('nhập số b');
+    alert('thứ tự trưỡc khi dùng hàm:' + a + ',' + b);
+    alert('thứ tự sau khi dùng hàm:' + changeLoca(a, b));
 </script>
 </body>
 </html>
