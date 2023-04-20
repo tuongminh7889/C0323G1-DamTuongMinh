@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <label>nhập vào chiều rộng<input type="number" id="cr">px</label><br/>
+    <label>nhập vào chiều dài<input type="number" id="cd">px</label><br/>
+</div>
+<div>
+    <button onclick="takePeri() ">tính chu vi</button>
+    <button onclick="takeAcre()">tính diện tích</button>
+</div>
+<div>
+    <p>chu vi là <label id="myRectangle.takePeri()"></label></p>
+    <p>diện tích là <label id="myRectangle.takeAcre()"></label></p>
+</div>
+<div>
+    <button type="button" onclick="canvas()">vẽ</button>
+    <canvas id="canvas" width="500px" height="300px"></canvas>
+</div>
+<script>
+    class Rectangle {
+        constructor(len, wid) {
+            this.length = len;
+            this.width = wid;
+        }
+
+        takeAcre() {
+            return this.length * this.width;
+        }
+
+        takePeri() {
+            return (this.length + this.width) * 2;
+        }
+
+        takeDraw() {
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#0a8efa';
+            ctx.fillRect(10, 10, this.length, this.width);
+            document.write("<br>" + "Dien tich:" +  myRectangle.takeAcre() + '<br>' + "chu vi:" + myRectangle.takePeri());
+        }
+    }
+
+    let length1=document.getElementById();
+    let width1=document.getElementById(width);
+    let myRectangle = new Rectangle(length1, width1);
+    myRectangle.takeAcre();
+    myRectangle.takePeri();
+    myRectangle.takeDraw();
+    // let myRectangle1 = new Rectangle(1000, 300);
+    // myRectangle1.takeAcre();
+    // myRectangle1.takePeri();
+    // myRectangle1.takeDraw();
+    // let myRectangle2 = new Rectangle(1200, 300);
+    // myRectangle2.takeAcre();
+    // myRectangle2.takePeri();
+    // myRectangle2.takeDraw();
+</script>
+</body>
+</html>

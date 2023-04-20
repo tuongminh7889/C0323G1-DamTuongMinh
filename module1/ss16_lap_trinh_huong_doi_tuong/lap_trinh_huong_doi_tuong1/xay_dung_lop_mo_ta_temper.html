@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhietke</title>
+</head>
+<body>
+<script>
+    class Nhietke {
+        constructor(tem) {
+            this.tempC = tem;
+        }
+
+        takeF() {
+            return (this.tempC * 1.8) + 32;
+        }
+
+        takeK() {
+            return (this.tempC + 273.15);
+        }
+    }
+
+    let temperature = new Nhietke(25);
+    temperature.takeF();
+    temperature.takeK();
+
+    document.write("Nhiệt độ bạn nhập vào là 25 độ C" + "<br>" + "Chuyển qua là" + temperature.takeF() + "Độ F" + "<br>" + temperature.takeK() + "độ K")
+</script>
+</body>
+</html>

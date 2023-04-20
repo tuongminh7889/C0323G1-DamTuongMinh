@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap 1</title>
+</head>
+<body>
+<script>
+    let arr= [] ;
+    let n = prompt("Độ dài n của mảng(số phần tử):");
+    for (let i = 0; i < n; i++) {
+        arr[i] = prompt("Phần tử thứ :" + (i + 1) + " bạn muốn nhập là:");
+    }
+    document.write("Mảng của bạn nhập vào là:" + arr);
+    for (let i = 0; i <= arr.length; i++) {
+        count = 0;
+        if ((arr[i]) % (arr.indexOf(i)) === 0) {
+            count++;
+        } else {
+            document.write("NO");
+            break;
+        }
+    }
+    if (count === (arr.length)) {
+        document.write("OK");
+    }
+</script>
+</body>
+</html>

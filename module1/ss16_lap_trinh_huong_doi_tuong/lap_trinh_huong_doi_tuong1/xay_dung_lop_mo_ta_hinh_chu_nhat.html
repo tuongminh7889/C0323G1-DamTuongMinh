@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="hinhchunhat" width="600" height="200"></canvas>
+</body>
+<script>
+    //len,wid,acre,peri,draw
+    class Rectangle {
+        constructor(len, wid) {
+            this.length = len;
+            this.width = wid;
+        }
+
+        takeAcre() {
+            return this.length * this.width;
+        }
+
+        takePeri() {
+            return (this.length + this.width) * 2;
+        }
+
+        takeDraw() {
+            let canvas = document.getElementById("hinhchunhat");
+            let ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#0a8efa';
+            ctx.fillRect(10, 10, myRectangle.length, myRectangle.width);
+            document.write("<br>" + "Dien tich:" + this.takeAcre() + '<br>' + "chu vi:" + this.takePeri());
+        }
+    }
+
+    let myRectangle = new Rectangle(600, 300);
+    myRectangle.takeAcre();
+    myRectangle.takePeri();
+    myRectangle.takeDraw();
+
+</script>
+</html>
