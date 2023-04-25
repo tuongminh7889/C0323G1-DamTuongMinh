@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check</title>
+</head>
+<body>
+<script>
+    let char = prompt("Input Character");
+    let cons = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
+    let vow = ['u', 'e', 'o', 'a', 'i'];
+    for (let i = 0; i <= cons.length; i++) {
+        if ([char] == cons[i]) {
+            alert("this character is a consonants!");
+            break;
+        }
+        if ([char] == vow[i]) {
+            alert("this character is a vowels!");
+            break;
+        }
+    }
+</script>
+</body>
+</html>

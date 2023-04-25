@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("input num of array:"));
+    let arr = [];
+    let count = 0;
+    for (let i = 0; i < num; i++) {
+        arr[i] = prompt("input index" + i);
+    }
+    document.write("New array is" + arr + "<br>");
+    //function divNum {
+    for (let j in arr) {
+        if (arr[j] % arr.indexOf(j) === 0) {
+            count++;
+        }
+    }
+    if (count === num) {
+        document.write("OK");
+    } else {
+        document.write("NO");
+    }
+</script>
+</body>
+</html>

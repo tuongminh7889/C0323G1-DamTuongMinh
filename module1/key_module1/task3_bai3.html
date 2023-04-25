@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim phan so lon nhat</title>
+</head>
+<body>
+<script>
+    let num = prompt(" input numerator :");
+    let deno = prompt(" input denominator :");
+    let arrNum = num.split(",");
+    let arrDeno = deno.split(",");
+    let index;
+    for (let i = 0; i < arrNum.length; i++) {
+        let max = [arrNum[0]] / [arrDeno[0]];
+        if (arrNum[i] / arrDeno[i] > max) {
+            max = [arrNum[i] / arrDeno[i]];
+            index = i;
+        }
+    }
+    document.write("maxFraction" + arrNum + "/" + arrDeno + " is " + index);
+</script>
+</body>
+</html>

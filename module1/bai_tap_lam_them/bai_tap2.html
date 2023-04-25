@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>find string</title>
+</head>
+<body>
+<script>
+    let frac = prompt("NHâp vào tham số muốn kiểm tra");
+    let arr1 = frac.split("/");
+
+    function find(string) {
+        if (string[0] % 1 !== 0 || string[1] % 1 !== 0 || string[1] == 0 || string.length !== 2) {
+            document.write("Không phải phân số");
+        } else if (string[0] === 0) {
+            document.write("0");
+        } else {
+            for (let i = 2; i < string[1]; i++) {
+                if (string[0] % i === 0 && string[1] % i === 0) {
+                    var a = string[0] / i;
+                    var b = string[1] / i;
+                }
+            }
+            document.write(a + "/" + b);
+        }
+    }
+
+    find(arr1);
+</script>
+</body>
+</html>

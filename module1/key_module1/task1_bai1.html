@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế</title>
+</head>
+<body>
+<script>
+    let wage = +prompt("input your money(unit milion) :");
+    let tax;
+    let salary;
+    if (wage < 0) {
+        alert("false, input new wage");
+    } else if (wage >= 15) {
+        tax = (wage * 20) / 100;
+    } else if (wage >= 7 && wage < 15) {
+        tax = (wage * 10) / 100;
+    } else if (wage < 7) {
+        tax = (wage * 5) / 100;
+    }
+    salary = wage - tax;
+    document.write("this wage is :" + wage + "<br>" + "Tax is:" + tax + "<br>" + "Salary is :" + salary);
+</script>
+</body>
+</html>

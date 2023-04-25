@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim so khac nhau</title>
+</head>
+<body>
+<script>
+    let a = prompt("input to array A");
+    let b = prompt("input to array B");
+    let arrA = a.split(",");
+    let arrB = b.split(",");
+    for (let i = 0; i < arrA.length; i++) {
+        for (let j = 0; j < arrB.length; j++) {
+            if (arrB[j] === arrA[i]) {
+                arrB.splice(j, 1);
+            }
+        }
+    }
+    document.write("Missing value (A , B) =" + arrB);
+</script>
+</body>
+</html>

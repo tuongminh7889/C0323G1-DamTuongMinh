@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prefix</title>
+</head>
+<body>
+<script>
+    let n = +prompt("input length array a");
+    let a = [];
+    let b1 = [];
+    let b = [];
+    let c = [];
+    let sum = 0;
+    let sum1 = 0;
+    let v = [0]
+    for (let i = 0; i < n; i++) {
+        a[i] = prompt("input num " + (i + 1) + " of arry a");
+        sum = sum + parseInt(a[i]);
+        sum1 = sum1 + a[i];
+        b[i] = sum;
+        b1[i] = sum1;
+    }
+    document.write("This arry a is :" + a + '<br>');
+    document.write("This array a when not add prefix sums:" + b1 + '<br>');
+    document.write("This array a when add prefix sums:" + b + '<br>');
+</script>
+</body>
+</html>
