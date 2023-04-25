@@ -48,12 +48,16 @@
                 choice(ncDua);
                 break;
         }
-    } while ((numOfName) !== '7');
+    } while ((numOfName) !== '7')
+    alert(" Tổng tiền là:" + count);
 
+
+    var count = 0;
 
     function choice(type) {
-        let num = prompt(type.name + type.price + "Input quantity of your choice:");
-        alert("You choice" + type.name + " It price :" + type.getGuestPrice(num));
+        let num = prompt("You choice :" + type.name + "\n\ price ís :" + type.price + "$" + "\n\ Input quantity of your choice:");
+        alert("You choice" + type.name + " \n\ It price :" + type.getGuestPrice(num) + "$");
+        count = count + (type.getGuestPrice(num));
     }
 </script>
 </body>
