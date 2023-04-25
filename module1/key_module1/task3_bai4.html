@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+<script>
+    class menu {
+        constructor(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        getGuestPrice(num) {
+            return num * this.price;
+        }
+    }
+
+    let numOfName;
+    do {
+        numOfName = prompt("Menu:\n\ 1. Cafe   4.Tomato :\n\  2.Nước cam  5.Cà Chua :\n\ 3. Cafe    6.Tomato :\n\ ");
+
+        let cafe = new menu('Coffe', 15);
+        let ncCam = new menu('OrangeJuie', 18);
+        let caRot = new menu('CarrotSmoothies', 20);
+        let caChua = new menu('TomatoSmoothies', 25);
+        let ncLoc = new menu('water', 10);
+        let ncDua = new menu('Coconut', 30);
+
+        switch (numOfName) {
+            case "1" :
+                choice(cafe);
+                break;
+            case "2" :
+                choice(ncCam);
+                break;
+            case '3' :
+                choice(caRot);
+                break;
+            case '4' :
+                choice(caChua);
+                continue;
+            case '5' :
+                choice(ncLoc);
+                break;
+            case '6' :
+                choice(ncDua);
+                break;
+        }
+    } while ((numOfName) !== '7');
+
+
+    function choice(type) {
+        let num = prompt(type.name + type.price + "Input quantity of your choice:");
+        alert("You choice" + type.name + " It price :" + type.getGuestPrice(num));
+    }
+</script>
+</body>
+</html>
