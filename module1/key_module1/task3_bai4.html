@@ -6,59 +6,44 @@
 </head>
 <body>
 <script>
-    class menu {
-        constructor(name, price) {
-            this.name = name;
-            this.price = price;
-        }
-
-        getGuestPrice(num) {
-            return num * this.price;
-        }
-    }
-
     let numOfName;
+    let count = 0;
     do {
-        numOfName = prompt("Menu:\n\ 1. Cafe   4.Tomato :\n\  2.Nước cam  5.Cà Chua :\n\ 3. Cafe    6.Tomato :\n\ ");
-
-        let cafe = new menu('Coffe', 15);
-        let ncCam = new menu('OrangeJuie', 18);
-        let caRot = new menu('CarrotSmoothies', 20);
-        let caChua = new menu('TomatoSmoothies', 25);
-        let ncLoc = new menu('water', 10);
-        let ncDua = new menu('Coconut', 30);
-
+        numOfName = prompt("Menu:\n\ 1. Cafe:   4.Nước ép cà chua:\n\  2.Cam Vắt:  5.Nước lọc:\n\ 3. Cà rốt:    6. Nước dừa: ");
         switch (numOfName) {
             case "1" :
-                choice(cafe);
+                let a = prompt("Cà phê :15k.Bạn muốn mấy phần")
+                alert("Bạn chọm" + a + "ly. Giá là:" + (a * 15) + "K");
+                count = count + (a * 15);
                 break;
             case "2" :
-                choice(ncCam);
+                let b = prompt("Cam vắt :20k.Bạn muốn mấy phần")
+                alert("Bạn chọm" + b + "ly. Giá là:" + (b * 20) + "K");
+                count = count + (b * 20);
                 break;
             case '3' :
-                choice(caRot);
+                let c = prompt("Nước ép cà rốt :22k.Bạn muốn mấy phần")
+                alert("Bạn chọm" + c + "ly. Giá là:" + (c * 22) + "K");
+                count = count + (c * 22);
                 break;
             case '4' :
-                choice(caChua);
-                continue;
+                let d = prompt("Nưỡc ép cà rốt  :15k.Bạn muốn mấy phần")
+                alert("Bạn chọm" + d + "ly. Giá là:" + (d * 15) + "K");
+                count = count + (d * 15);
+                break;
             case '5' :
-                choice(ncLoc);
+                let e = prompt("Nưỡc loc :10k.Bạn muốn mấy phần")
+                alert("Bạn chọm" + e + "chai. Giá là:" + (e * 15) + "K");
+                count = count + (e * 15);
                 break;
             case '6' :
-                choice(ncDua);
+                let f = prompt("Nước dừa :25k.Bạn muốn mấy phần")
+                alert("Bạn chọm" + f + "trái. Giá là:" + (f * 15) + "K");
+                count = count + (f * 15);
                 break;
         }
     } while ((numOfName) !== '7')
-    alert(" Tổng tiền là:" + count);
-
-
-    var count = 0;
-
-    function choice(type) {
-        let num = prompt("You choice :" + type.name + "\n\ price ís :" + type.price + "$" + "\n\ Input quantity of your choice:");
-        alert("You choice" + type.name + " \n\ It price :" + type.getGuestPrice(num) + "$");
-        count = count + (type.getGuestPrice(num));
-    }
+    alert("Tổng bill là " + count + "K");
 </script>
 </body>
 </html>
