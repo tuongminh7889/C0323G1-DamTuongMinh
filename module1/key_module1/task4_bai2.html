@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Task 4  Bài 2</title>
+    <title>Task 4 Bài 2</title>
 </head>
 <body>
 <script>
     let s = prompt('Nhập chuỗi ký tự bất kỳ');
-    document.write('Chuỗi nhập vào là : ' + s + '<br> Số ký tự khác nhau trong chuỗi :' + differentSymbolsNaive(s));
+    document.write('Chuỗi nhập vào là : ' + s +
+        '<br> Số ký tự khác nhau trong chuỗi :' + differentSymbolsNaive(s));
 
     function differentSymbolsNaive(string) {
         let arr = string.split('');
@@ -20,6 +21,29 @@
         }
         return newArr.length;
     }
+
+    // function timKyTuKhacNhau(chuoi) {
+    //     let arrA = chuoi.split('');
+    //     let arrB = arrA;
+    //     let count1 = 0;
+    //     for (let i = 0; i < arrA.length; i++) {
+    //         let count = 0;
+    //         for (let j = 0; j < arrB.length; j++) {
+    //             if (arrA[i] === arrB[j]) {
+    //                 count++;
+    //             }
+    //             if (count > 1) {
+    //                 arrB.splice(j - 1,1,"");
+    //             }
+    //         }
+    //         if (count > 1) {
+    //             count1++;
+    //         }
+    //     }//document("các ký tự khác nhau là :"+arrB+"Tổng số ký tự:"+arrA.length-count1);
+    //     return  //arrA.length - count1;
+    // }
+    //
+    // document.write(timKyTuKhacNhau('12332342'));
 </script>
 </body>
 </html>

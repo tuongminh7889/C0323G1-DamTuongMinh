@@ -8,7 +8,6 @@
 <script>
     let s1 = prompt('Nhập xâu ký tự s1:');
     let s2 = prompt('Nhập xâu ký tự s2:');
-    document.write('Xâu 1: ' + s1 + '<br>Xâu 2: ' + s2 + '<br>Số ký tự chung là: ' + commonCharacterCount(s1, s2));
 
     function commonCharacterCount(s1, s2) {
         let arr1 = s1.split('');
@@ -16,15 +15,18 @@
         let count = 0;
         for (let i = 0; i < arr1.length; i++) {
             for (let j = 0; j < arr2.length; j++) {
-                if (arr1[i] == arr2[j] && arr1[i] != '') {
-                    arr1[i] = arr1.splice(i-1, 1,0);
-                    arr2[j] = arr2.splice(j-1, 1,0);
+                if (arr1[i] === arr2[j] && arr1[i] !== '') {
+                    arr1[i] = arr1.splice(i - 1, 1, 0);
+                    arr2[j] = arr2.splice(j - 1, 1, 0);
                     count++;
                 }
             }
         }
         return count;
     }
+
+    document.write('Xâu 1: ' + s1 + '<br>Xâu 2: ' + s2 + '<br>Số ký tự chung là: ' + commonCharacterCount(s1, s2));
+
 </script>
 </body>
 </html>
