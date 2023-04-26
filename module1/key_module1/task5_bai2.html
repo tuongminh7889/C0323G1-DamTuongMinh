@@ -6,10 +6,10 @@
 </head>
 <body>
 <script>
-    let m = +prompt('Nhập m');
-    let n = +prompt('Nhập n');
+    let m = +prompt('Nhập chiều m');
+    let n = +prompt('Nhập chiều n');
     let array = createArr(m, n);
-    document.write("")
+
     function createArr(m, n) {
         let arr = new Array(m);
         for (let i = 0; i < arr.length; i++) {
@@ -22,7 +22,7 @@
     }
 
     function listPrimeNumber(arr) {
-        let result = ''
+        let result = '';
         for (let i = 0; i < arr.length; i++) {
             for (let j = 0; j < arr[i].length; j++) {
                 if (checkPrimeNumber(arr[i][j])) {
@@ -43,13 +43,12 @@
                     count++;
                 }
             }
-            if (count == 1) {
-                return true;
-            } else {
-                return false;
-            }
+            return count++;
         }
     }
+
+    document.write("Mảng được nhập vào m,n: " + array);
+    document.write("Các số nguyên tố trong mảng 2 chiều m,n là:" + listPrimeNumber(array) + '<br>');
 </script>
 </body>
 </html>

@@ -9,7 +9,8 @@
     let m = +prompt('Nhập chiều ma trận m');
     let n = +prompt('Nhập chiều ma trận n');
     let array = createArr(m, n);
-    document.getElementById('result').innerHTML = 'Mảng nhập vào : ' + array + '<br> Phần tử lớn nhất là : ' + findMax(array) + '<br> Phần tử nhỏ nhất là : ' + findMin(array);
+    document.getElementById('result').innerHTML = 'Mảng nhập vào : ' + array +
+        '<br> Phần tử lớn nhất là : ' + findMax(array) + '<br> Phần tử nhỏ nhất là : ' + findMin(array);
 
     function createArr(m, n) {
         let arr = new Array(m);
