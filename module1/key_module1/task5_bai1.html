@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>matrix</title>
+</head>
+<body>
+<script>
+    let m = +prompt('Nhập chiều m');
+    let n = +prompt('Nhập chiều n');
+    let array = createArr(m, n);
+    document.write("Tổng số chẵn trong mảng :" + getTotal(array));
+
+    function createArr(m, n) {
+        let arr = new Array(m);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = new Array(n);
+            for (let j = 0; j < arr[i].length; j++) {
+                arr[i][j] = +prompt('Nhập phần tử :' + i + j);
+            }
+        }
+        return arr;
+    }
+
+    function getTotal(arr) {
+        let total = 0
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] % 2 == 0) {
+                    total += arr[i][j];
+                }
+            }
+        }
+        return total;
+    }
+</script>
+</body>
+</html>

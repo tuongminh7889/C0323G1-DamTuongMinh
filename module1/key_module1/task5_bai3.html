@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gia tri</title>
+</head>
+<body>
+<script>
+    let m = +prompt('Nhập chiều ma trận m');
+    let n = +prompt('Nhập chiều ma trận n');
+    let array = createArr(m, n);
+    document.getElementById('result').innerHTML = 'Mảng nhập vào : ' + array + '<br> Phần tử lớn nhất là : ' + findMax(array) + '<br> Phần tử nhỏ nhất là : ' + findMin(array);
+
+    function createArr(m, n) {
+        let arr = new Array(m);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = new Array(n);
+            for (let j = 0; j < arr[i].length; j++) {
+                arr[i][j] = +prompt('Nhập phần tử cho ma trận 2 chiều:' + i + j);
+            }
+        }
+        return arr;
+    }
+
+    function findMax(arr) {
+        let max = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+            }
+        }
+        return max;
+    }
+
+    function findMin(arr) {
+        let min = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] < min) {
+                    min = arr[i][j];
+                }
+            }
+        }
+        return min;
+    }
+</script>
+</body>
+</html>

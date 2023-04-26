@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4  Bài 2</title>
+</head>
+<body>
+<script>
+    let s = prompt('Nhập chuỗi ký tự bất kỳ');
+    document.write('Chuỗi nhập vào là : ' + s + '<br> Số ký tự khác nhau trong chuỗi :' + differentSymbolsNaive(s));
+
+    function differentSymbolsNaive(string) {
+        let arr = string.split('');
+        let newArr = [arr[0]];
+        let newStr = newArr.join('');
+        for (let i = 0; i < arr.length; i++) {
+            newStr = newArr.join('');
+            if (!newStr.includes(arr[i]))
+                newArr.push(arr[i]);
+        }
+        return newArr.length;
+    }
+</script>
+</body>
+</html>
