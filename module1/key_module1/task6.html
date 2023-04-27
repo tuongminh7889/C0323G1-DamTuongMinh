@@ -9,7 +9,7 @@
     border-collapse: collapse;
     border: 1px solid black;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
   }
 </style>
 <button onclick="add()">Thêm mới học viên</button>
@@ -29,16 +29,17 @@
     }
   }
 
-  let student1 = new Student('HV-001', 'Nguyễn Văn A', 'C1022G1', 'nguyenvana@gmail.com', '01/01/2004', 1);
-  let student2 = new Student('HV-002', 'Nguyễn Văn B', 'C1122G1', 'nguyenvanb@gmail.com', '02/02/2004', 2);
-  let student3 = new Student('HV-003', 'Nguyễn Thị C', 'C1222G1', 'nguyenthic@gmail.com', '03/03/2004', 3);
+  let student1 = new Student('HV-0001', 'Nguyễn Văn A', 'C1022G1', 'nguyenvana@gmail.com', '01/01/2004', 1);
+  let student2 = new Student('HV-0002', 'Nguyễn Văn B', 'C1122G1', 'nguyenvanb@gmail.com', '02/02/2004', 1);
+  let student3 = new Student('HV-0003', 'Nguyễn Thị C', 'C1222G1', 'nguyenthic@gmail.com', '03/03/2004', 3);
   let arr = [student1, student2, student3];
   displayTable();
 
   function displayTable() {
-    let str = '<table><tr><th>Mã học viên</th><th>Tên</th><th>Lớp</th><th>Email</th><th>Ngày sinh</th><th>Module</th></tr>';
+    let str = "<table><tr><th>Mã học viên</th><th>Tên</th><th>Lớp</th><th>Email</th><th>Ngày sinh</th><th>Module</th></tr>";
     for (let i = 0; i < arr.length; i++) {
-      str += '<tr><td>' + arr[i].id + '</td><td>' + arr[i].name + '</td><td>' + arr[i].className + '</td><td>' + arr[i].email + '</td><td>' + arr[i].dob + '</td><td>' + arr[i].module + '</td></tr>';
+      str += '<tr><td>' + arr[i].id + '</td><td>' + arr[i].name + '</td><td>' + arr[i].className + '</td>' +
+              '<td>' + arr[i].email + '</td><td>' + arr[i].dob + '</td><td>' + arr[i].module + '</td></tr>';
     }
     str += '</table>';
     document.getElementById('result').innerHTML = str;
@@ -47,14 +48,14 @@
   function add() {
     let newStudent = new Student();
     do {
-      newStudent.id = prompt('Nhập Mã học viên là duy nhất không trùng lặp và có định dạng HV-XXX ( với XXX là 3 chữ số )');
+      newStudent.id = prompt('Nhập Mã học viên là duy nhất không trùng lặp và có định dạng HV-XXXX ( với XXXX là 4 chữ số )');
     }
     while (!checkId(newStudent.id));
     do {
-      newStudent.name = prompt('Nhập tên học viên chỉ được tối đa 50 ký tự.');
+      newStudent.name = prompt('Nhập tên học viên chỉ được tối đa 50 ký tự .');
     }
     while (newStudent.name.length > 50);
-    newStudent.className = prompt('Nhập className');
+    newStudent.className = prompt('Nhập lớp');
     newStudent.email = prompt('Nhập email');
     do {
       newStudent.dob = prompt('Nhập ngày sinh đúng định dạng dd/mm/yyyy ( ngày / tháng / năm )');
@@ -74,23 +75,23 @@
     for (let i = 0; i < arr.length; i++) {
       if (editId === arr[i].id) {
         checkConditon = true;
-        let editName = prompt('Nhập vào để sửa name.Nếu không thì cancel');
+        let editName = prompt('Nhập vào để sửa tên.Nếu không thì cancel');
         if (editName != null) {
           arr[i].name = editName;
         }
-        let editClassName = prompt('Nhập vào để sửa classname.Nếu không thì cancel');
+        let editClassName = prompt('Nhập vào để sửa lớp.Nếu không thì cancel');
         if (editClassName != null) {
           arr[i].className = editClassName;
         }
-        let editEmail = prompt('Nhập vào để sửa email.Nếu không thì cancel');
-        if (editEmail != null) {
+        let editEmail = prompt('Nhập nội dung sửa email.Nếu không thì cancel');
+        if (editEmail != null && editEmail !=='@') {
           arr[i].email = editEmail;
         }
-        let editDob = prompt('Nhập vào để sửa DOB.Nếu không thì cancel');
+        let editDob = prompt('Nhập nội dung sửa ngày sinh.Nếu không thì cancel');
         if (editDob != null) {
           arr[i].dob = editDob;
         }
-        let editModule = prompt('Nhập vào để sửa module.Nếu không thì cancel');
+        let editModule = prompt('Nhập nội dung sửa module.Nếu không thì cancel');
         if (editModule != null) {
           arr[i].module = editModule;
         }
@@ -108,10 +109,10 @@
     for (let i = 0; i < arr.length; i++) {
       if (deleteId === arr[i].id) {
         checkConditon = true;
-        if (confirm('Bạn có muốn xoá học viên có ID ' + arr[i].id) === true) {
+        if (confirm('Bạn chắc chắn muốn xoá học viên có ID ' + arr[i].id) === true+'???') {
           arr.splice(i, 1);
         } else {
-          alert('Bạn đã cancel không xoá');
+          alert('Đã cancel');
         }
       }
     }
@@ -129,15 +130,16 @@
       }
     }
     const checkNumberArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    if (str[0] !== 'H' || str[1] !== 'V' || str[2] !== '-' || !checkNumberArr.includes(str[3]) || !checkNumberArr.includes(str[4]) || !checkNumberArr.includes(str[5])) {
+    if (str[0] !== 'H' || str[1] !== 'V' || str[2] !== '-' || !checkNumberArr.includes(str[3]) ||
+            !checkNumberArr.includes(str[4]) || !checkNumberArr.includes(str[5]) || !checkNumberArr.includes(str[6])) {
       checkCondition = false;
     }
     return checkCondition;
   }
 
   function checkDate(date) {
-    const regexExp = /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
-    return regexExp.test(date);
+    const regexEx= /^([0-3][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
+    return regexEx.test(date);
   }
 </script>
 </body>
