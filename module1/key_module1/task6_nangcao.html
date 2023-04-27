@@ -59,15 +59,15 @@
         do {
             newStudent.className = prompt('Nhập lớp');
         }
-        while (newStudent.className != null);
+        while (!checkClassName(newStudent.className));
         do {
             newStudent.email = prompt('Nhập email');
         }
-        while (newStudent.email != null);
+        while (checkEmail(newStudent.email));
         do {
             newStudent.dob = prompt('Nhập ngày sinh đúng định dạng dd/mm/yyyy ( ngày / tháng / năm )');
         }
-        while (newStudent.dob != null);
+        while (!checkDate(newStudent.dob));
         do {
             newStudent.module = prompt('Nhập Module chỉ được nhập từ 1 -> 6');
         }
@@ -144,6 +144,55 @@
         return checkCondition;
     }
 
+    function checkDate(date) {
+        const regexEx = /^([0-3][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
+        return regexEx.test(date);
+    }
+
+    function checkEmail(str) {
+        let checkEmail = true ;
+        let eMail = str.split("");
+        let count = 0;
+        for (let i = 0; i < eMail.toString(); i++) {
+            if (eMail[i] === '') {
+                return false;
+            }
+            if (eMail[i] === "." || eMail[i] === '@') {
+                count++;
+            }
+        }
+        if (count > 1) {
+            return checkEmail;
+        }
+    }
+
+    function checkClassName(str) {
+        let checkClassName = true;
+        for (let i = 0; i < arr.length; i++) {
+            if (str === arr[i].id) {
+                checkClassName = false;
+            }
+        }
+        const checkNumberArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        if (string[0] !== 'C' || !checkNumberArr.includes(str[2]) || !checkNumberArr.includes(string[3]) || !checkNumberArr.includes(string[4]) ||
+            !checkNumberArr.includes(string[5]) || string[6] !== 'G' || !checkNumberArr.includes(string[7])) {
+            checkClassName = false;
+        } return checkClassName ;
+    }
 </script>
 </body>
 </html>
+let checkDate = true ;
+for (let i = 0; i < arr.length; i++) {
+if (date === arr[i].dob) {
+checkDate = false;
+}
+}
+const checkNumberArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+if ((date[0] != checkNumberArr[0][1][2][3]) || !checkNumberArr.includes(date[1])||date[3] !== '/' || date[4] !==checkNumberArr[0][1] ||
+!checkNumberArr.includes(date[5]) || date[6] != '/' || date[7] != checkNumberArr[1][2] || date[8] != checkNumberArr[9][0][1]
+|| date[9] != checkNumberArr[9][0][1] ||!checkNumberArr.includes(date[10]));
+{
+checkDate = false;
+}
+return checkDate= true;
