@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ve tam giac can </title>
+</head>
+<body>
+<script>
+    let h =+prompt('Nhập chiều cao tam giác cân');
+    for (let i = h-1; i > 0; i--) {
+        for (let j = 0; j < h ; j++) {
+            if (j == i) {
+                document.write('*');
+            } else {
+                document.write('&nbsp&nbsp');
+            }
+        }
+        for (let k = h-2; k > 0; k--) {
+            if (k == i) {
+                document.write('*');
+            } else {
+                document.write('&nbsp&nbsp');
+            }
+        }
+        document.write('<br>');
+    }
+    for (let i = 0; i < h ; i++) {
+        document.write('*'+'&nbsp&nbsp');
+    }
+</script>
+</body>
+</html>
