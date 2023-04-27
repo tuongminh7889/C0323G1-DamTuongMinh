@@ -27,7 +27,7 @@
             this.dob = dob;
             this.module = module;
         }
-
+        setID
     }
 
     let student1 = new Student('HV-0001', 'Nguyễn Văn A', 'C1022G1', 'nguyenvana@gmail.com', '01/01/2004', 1);
@@ -145,8 +145,20 @@
     }
 
     function checkDate(date) {
-        const regexEx = /^([0-3][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/;
-        return regexEx.test(date);
+        let checkDate = true ;
+        for (let i = 0; i < arr.length; i++) {
+            if (date === arr[i].dob) {
+                checkDate = false;
+            }
+        }
+        const checkNumberArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        if ((date[0] != checkNumberArr[0][1][2][3]) || !checkNumberArr.includes(date[1])||date[3] !== '/' || date[4] !==checkNumberArr[0][1] ||
+            !checkNumberArr.includes(date[5]) || date[6] != '/' || date[7] != checkNumberArr[1][2] || date[8] != checkNumberArr[9][0][1]
+            || date[9] != checkNumberArr[9][0][1] ||!checkNumberArr.includes(date[10]));
+        {
+            checkDate = false;
+        }
+        return checkDate= true;
     }
 
     function checkEmail(str) {
@@ -179,20 +191,7 @@
             checkClassName = false;
         } return checkClassName ;
     }
+
 </script>
 </body>
 </html>
-let checkDate = true ;
-for (let i = 0; i < arr.length; i++) {
-if (date === arr[i].dob) {
-checkDate = false;
-}
-}
-const checkNumberArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-if ((date[0] != checkNumberArr[0][1][2][3]) || !checkNumberArr.includes(date[1])||date[3] !== '/' || date[4] !==checkNumberArr[0][1] ||
-!checkNumberArr.includes(date[5]) || date[6] != '/' || date[7] != checkNumberArr[1][2] || date[8] != checkNumberArr[9][0][1]
-|| date[9] != checkNumberArr[9][0][1] ||!checkNumberArr.includes(date[10]));
-{
-checkDate = false;
-}
-return checkDate= true;
