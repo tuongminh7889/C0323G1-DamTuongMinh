@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Input lenght of array you want :(<50)");
+    let arr = [];
+    let sum = 0;
+    count = 0;
+    if (n > 50) {
+        alert("Wrong , relay Input")
+    } else {
+        for (let i = 0; i < n; i++) {
+            arr[i] = +prompt("input index:" + i);
+            if (arr[i] % 5 == 0 && i % 3 == 0) {
+                sum = sum + arr[i];
+                count++;
+            }
+        }
+    }
+    document.write("New Array is" + arr + '<br>');
+    document.write("Average of you array is :" + sum / count);
+</script>
+</body>
+</html>

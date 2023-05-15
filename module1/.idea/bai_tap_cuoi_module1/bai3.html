@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fibonaci</title>
+</head>
+<body>
+<script>
+    let str = prompt("input you array:");
+    let arr = str.split(",");
+    document.write(str + '<br>');
+
+    function funSort(arr) {
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if ( arr[i]
+        }
+    }
+
+    function checkFibo(num) {
+        let a = 1;
+        let b = 0;
+        let temp;
+        for (let i = 0; i < num; i++) {
+            temp = a;
+            a += b;
+            b = temp;
+            if (num == b){
+                return num;
+            }
+        }
+    }
+
+
+    let arr2 = [];
+
+    function sortFibo(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] <= 1 || (checkFibo(arr[i]))) {
+                arr2.push(arr[i]);
+            }
+        }
+        return arr2;
+    }
+
+
+    document.write("array fibo before sort:" + sortFibo(arr) + '<br>');
+    document.write("array after before:" + ));
+</script>
+</body>
+</html>

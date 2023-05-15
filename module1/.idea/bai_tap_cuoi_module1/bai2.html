@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    let str = prompt("Input string ");
+    document.write(acroString(str));
+
+    function acroString(string) {
+        let arr = string.split(" ");
+        let arr1 = [];
+        let arr2 = [];
+        let string1;
+        if (arr == null) {
+            alert("This sting is empty");
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] !== "") {
+                arr1.push(arr[i]);
+            }
+        }
+        if (arr1.length == 1) {
+            alert("This only 1 words, no need cronym !");
+        }
+        for (let i = 0; i < arr1.length; i++) {
+            arr2.push(arr1[i][0]);
+        }
+        return arr2.join("").toUpperCase();
+    }
+</script>
+</body>
+</html>

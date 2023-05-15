@@ -1,10 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Task 7</title>
 </head>
+<style>
+    header {
+        padding-top: 1px;
+        font-size: 50px;
+        border-bottom: 5px solid #e773dd;
+        text-align: -moz-center;
+        color: #000000;
+        background-color: #ffffff;
+        list-style-position: initial;
+    }
+
+    div {
+        height: 100%;
+        width: 160px;
+        position: absolute;
+        background-color: #83c0f3;
+        padding-top: 20px;
+    }
+
+    select {
+        padding: 6px 8px 6px 16px;
+        font-size: 15px;
+        color: #818181;
+        display: block;
+        margin-inline: auto;
+    }
+</style>
 <body>
-$END$
+<header>
+    <img src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAAB5CAMAAAAqJH57AAAA0lBMVEX///8oKILyWikmJoHl5e4rK4MUFHwREXwDA3m+vtURD3wZF33Dw9a0tc6ensGNjbXd3efW1uP4+PpJSpAJCXqsqsn+9vTxQAD3WyNCQo2FPGYbJoTy8vciIoDxSwAAAHPzYjbyUhr97un71sz84txSUZQxMYUhHoJqaqHk1tz5yr98G1PzeVf3q5nzbUj2mYT5v7HJcXAAI4d6N2eALFtSL3fJTkPLrrqdQVplM3HaUja1SlTmUyv0gWS1PkO/s8WoQ1T1im9yQHX4taRXXZx4d6lwsVGqAAACnElEQVRoge2Za3OaQBSGdRcRJVI1qKsIst6bqrGk6SWtadPE//+XGokirAuxyImd6Xk+6Izu8MyBA/vuksshCIIgCIIgCIIg/wvd2oUcBVbbGFFdLcrQLutw3roxNm1K81JouwsmVkZajHWDDWeuTibxXkizYtpJYkBzO1kMZza0ZDGYuVtIaC5Qc2VfMi1qUkYw9/M06Gu7YJSkwDzDukF/UR32KSmijHeXWTXeVJxTggYrV9CMZjSjGc1o/nvz8H1NRoYZQW6+clsfnsNIz48kL5/+V49mF4xk5v7MIaxjyTKZmd0kLjHPHU7izPo7OPNg4RByBnP/mjNyDvPS5YScwbzpLPL2Zsv76DDy9mbq3RBOQrBPmhlQpmBm7/YzC3sJd780QrQpjNmyvpKImPN5MzLq0oYwW963u2jBzmwQHVQHMVuF78KJZktxEIy580MoeNU/GARh7q+caMHkSjIKwOxPDiGvM5cOy9w8cPmrJxrCHEwOu2cHOegsGPNSKJjd/4wdm6V5KHQWu7vR4hNghmahsxj7lbcSsmdm5oErFnzr0aTUm5G5+dCKelnHo/nEvJ2N+ZELJ/q+8DITq/EH7dLT56rBQriFZ7+97VGpGhvj9/uE5UZKsXALc/KYewp2eifti6oUY7/b36ulEzejV9h/ZhnlIOrY8m1PbR9JqJ2y5IiZu/7kUE16kSCS+jKHzMy53saOtX60mGppl1V7szMb7n5Uji9aS72q2pk5D08Opd6R4vI0rXhrZs5DNN81ekdVbT6lXz37ZmdxEDsq+uRVt62tT1i2P5sPAq1Pdarqca/oNlDbHJ+0mdFs8dVQ/ldtXdCLqpyiOmk3TtssaM5jvBvqtZIhpwH8NhZBEARBEARBEAT5R/gD1GFFkayD+/kAAAAASUVORK5CYII=
+         height="120px" width="120px"> Hệ thống quản lý bài tập Case Study Module 1
+</header>
+<div>
+    <form action="task_7.html" method="get">
+        <select name="task1" id="task1">
+            <option value="Bai1" selected="baitap1">Task1-Bài1</option>
+            <option value="Bai2">Task1-Bài2</option>
+        </select>
+        <br>
+        <select name="task2" id="task2">
+            <option value="Bai1" url="https://github.com/tuongminh7889/C0323G1-DamTuongMinh/blob/main/module1/key_module1/task3_bai1.html">Task2-Bài1</option>
+            <option value="Bai2">Task2-Bài2</option>
+            <option value="Bai3">Task2-Bài3</option>
+        </select>
+        <br>
+        <select name="task3" id="task3">
+            <option value="Bai1">Task3-Bài1</option>
+            <option value="Bai2">Task3-Bài2</option>
+            <option value="Bai2">Task3-Bài3</option>
+            <option value="Bai2">Task3-Bài4</option>
+        </select>
+        <br>
+        <select name="task4" id="task4">
+            <option value="Bai1">Task4-Bài1</option>
+            <option value="Bai1">Task4-Bài2</option>
+            <option value="Bai1">Task4-Bài3</option>
+        </select>
+        <br>
+        <select name="task5" id="task5">
+            <option value="Bai1">Task5-Bài1</option>
+            <option value="Bai1">Task5-Bài2</option>
+            <option id="Bai1">Task5-Bài3</option>
+        </select>
+        <br>
+    </form>
+</div>
+
+
+
+<script>
+
+
+
+
+    let a =document.getElementById("baitap1");
+    let giatri =a.options[a.selectedIndex].text;
+    giatri= string ('https://github.com/tuongminh7889/C0323G1-DamTuongMinh/commit/248b6bd96c04ae89d5a3ace7e84d4eb49cfe298d#diff-b32ec962e5e83d513603293fc57caf067031dd99993bd60e459379ea763199f8');
+
+</script>
 </body>
 </html>
